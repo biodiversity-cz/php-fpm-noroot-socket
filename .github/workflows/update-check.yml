@@ -20,7 +20,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: php:8.3-fpm
-          image: ghcr.io/krkabol/php-fpm-noroot-socket :main
+          image: ghcr.io/krkabol/php-fpm-noroot-socket:main
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
