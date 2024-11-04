@@ -1,4 +1,4 @@
-FROM php:8.3-fpm@sha256:2f89fe4dc408f05fed7cd298ea4c8802a5e6cb8e9fd882906ef04a9f074fd7de
+FROM php:8.3-fpm@sha256:dd5ae053b1d4d3b876b421ada919283f1302440f9ab582fdae19bbb23238002f
 RUN useradd -u 1000 -ms /bin/bash www && \
     usermod -aG www-data www && \
     mkdir /sock && \
