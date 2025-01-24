@@ -6,7 +6,8 @@ LABEL org.opencontainers.image.description="no root UNIX socket PHP/FPM"
 
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
-        libpq-dev && \
+        libpq-dev  \
+        libicu-dev && \
         apt-get autoclean -y && \
         apt-get remove -y wget && \
         apt-get autoremove -y && \
