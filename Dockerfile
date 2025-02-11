@@ -7,7 +7,10 @@ LABEL org.opencontainers.image.description="no root UNIX socket PHP/FPM"
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
         libpq-dev  \
-        libicu-dev && \
+        libicu-dev  \
+        libpng-dev \
+        libjpeg-dev \
+        libfreetype6-dev \&& \
         apt-get autoclean -y && \
         apt-get remove -y wget && \
         apt-get autoremove -y && \
@@ -17,7 +20,10 @@ RUN  docker-php-ext-install pdo && \
      docker-php-ext-install intl && \
      docker-php-ext-install pdo_pgsql && \
      docker-php-ext-install pgsql && \
-     docker-php-ext-install opcache
+     docker-php-ext-install opcache && \
+     docker-php-ext-configure gd --with-freetype --with-jpeg && \
+     docker-php-ext-install gd
+
 
 RUN useradd -u 1000 -ms /bin/bash www && \
     usermod -aG www-data www && \
