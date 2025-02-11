@@ -10,9 +10,8 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         libicu-dev  \
         libpng-dev \
         libjpeg-dev \
-        libfreetype6-dev \&& \
+        libfreetype6-dev && \
         apt-get autoclean -y && \
-        apt-get remove -y wget && \
         apt-get autoremove -y && \
         rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
