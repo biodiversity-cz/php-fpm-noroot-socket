@@ -11,7 +11,7 @@ RUN apt-get update && apt-get dist-upgrade -y \
         libpng-dev \
         libjpeg-dev \
         libfreetype6-dev  \
-        libzip-dev \
+        libzip-dev php8-zip \
         zip \
         && apt-get autoclean -y \
         && apt-get autoremove -y \
