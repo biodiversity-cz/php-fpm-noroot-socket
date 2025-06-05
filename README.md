@@ -4,5 +4,3 @@ PHP-FPM unprivileged image with shared socket. More info at the [Nginx container
 Individual configuration should be store in $PHP_INI_DIR/conf.d/, that is /usr/local/etc/php/conf.d (but check the [documentation](https://hub.docker.com/_/php)).
 
 The memory limit is possible change also via ENV variable PHP_MEMORY_LIMIT, see php.ini-production:435
-
-Only 4xx/5xx logged in default setting.
