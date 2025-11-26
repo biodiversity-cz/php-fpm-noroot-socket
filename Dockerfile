@@ -1,6 +1,6 @@
 FROM php:8.5-fpm@sha256:559e1cab264b847fd752f5e85e65f0ce9fcd49b4b6b535edb54ea738ab8d56ce
 
-MAINTAINER Petr Novotný <novotp@natur.cuni.cz>
+LABEL maintainer="Petr Novotný novotp@natur.cuni.cz"
 LABEL org.opencontainers.image.source=https://github.com/biodiversity-cz/php-fpm-noroot-socket
 LABEL org.opencontainers.image.description="no root UNIX socket PHP/FPM"
 
@@ -21,7 +21,6 @@ RUN  docker-php-ext-install pdo && \
      docker-php-ext-install intl && \
      docker-php-ext-install pdo_pgsql && \
      docker-php-ext-install pgsql && \
-     docker-php-ext-install opcache && \
      docker-php-ext-configure gd --with-freetype --with-jpeg && \
      docker-php-ext-install gd && \
      docker-php-ext-install zip
