@@ -1,4 +1,4 @@
-FROM php:8.5-fpm@sha256:a9d782385b5caef1e38df0f09bbf158cb01536157b15085e4f5706e56a55115e
+FROM php:8.5-fpm@sha256:3e0bf6c361c37c903745abe8942083b441d105232445f0d4dc4c08d53a75d8ea
 
 LABEL maintainer="Petr Novotný novotp@natur.cuni.cz"
 LABEL org.opencontainers.image.source=https://github.com/biodiversity-cz/php-fpm-noroot-socket
