@@ -17,13 +17,15 @@ RUN apt-get update && apt-get dist-upgrade -y \
         && apt-get autoremove -y \
         && rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
-RUN  docker-php-ext-install pdo && \
-     docker-php-ext-install intl && \
-     docker-php-ext-install pdo_pgsql && \
-     docker-php-ext-install pgsql && \
-     docker-php-ext-configure gd --with-freetype --with-jpeg && \
-     docker-php-ext-install gd && \
-     docker-php-ext-install zip
+RUN docker-php-ext-install \
+        pdo \
+        intl \
+        pdo_pgsql \
+        pgsql \
+        pcntl \
+        zip && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install gd
 
 
 RUN useradd -u 1000 -ms /bin/bash www && \
